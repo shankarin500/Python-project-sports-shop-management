@@ -1,0 +1,58 @@
+mysql> use sportshop
+Database changed
+mysql> CREATE TABLE IF NOT EXISTS inventory (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     item_name VARCHAR(255) NOT NULL,
+    ->     quantity INT NOT NULL
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS cart_items (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     item_name VARCHAR(255) NOT NULL,
+    ->     quantity INT NOT NULL
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS ball (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     item_name VARCHAR(255) NOT NULL,
+    ->     quantity INT NOT NULL
+    -> );
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS shoe (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     item_name VARCHAR(255) NOT NULL,
+    ->     quantity INT NOT NULL
+    -> );
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS bat (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     item_name VARCHAR(255) NOT NULL,
+    ->     quantity INT NOT NULL
+    -> );
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS sportswear (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     item_name VARCHAR(255) NOT NULL,
+    ->     quantity INT NOT NULL
+    -> );
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> ALTER TABLE ball ADD cost INT;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE bat ADD cost INT;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE sportswear ADD cost INT;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DROP TABLE shoe;
+Query OK, 0 rows affected (18.79 sec)
